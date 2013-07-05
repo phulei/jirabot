@@ -6,7 +6,7 @@ configatron.irc.server = #STRING
 # configure Jira information, don't forget /browse/ in the URL
 configatron.jira.url = #STRING
 configatron.jira.user = #STRING - valid jira user
-configatron.jira.pass = #STRING - user's pass
+configatron.jira.pass = $stdin.gets.chomp # prompts for password
 # ticket regex for jira.
 configatron.jira.regex = #REGEXP
 # example: /\b(project1|project2)-([0-9]{1,7})\b/i
