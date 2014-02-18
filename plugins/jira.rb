@@ -20,6 +20,8 @@ class Jira
       status = details.at_css("span[@id='status-val']").text.strip
       return if thingies.include? "Navigator"
       thingies.shift
+      # this line may cause you problems.  If you don't
+      # see full ticket information, comment it out.
       3.times { thingies.pop }
       m.reply "#{url} // #{thingies.join(" ")} Status: #{status}"
     end
