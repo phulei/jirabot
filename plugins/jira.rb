@@ -17,10 +17,11 @@ class Jira
       response = httpget url
       details = Nokogiri::HTML response
       thingies = details.css('title')[0].text.split(" ")
+      status = details.at_css("span[@id='status-val']").text.strip
       return if thingies.include? "Navigator"
       thingies.shift
       3.times { thingies.pop }
-      m.reply "#{url} // #{thingies.join(" ")}"
+      m.reply "#{url} // #{thingies.join(" ")} Status: #{status}"
     end
 
 
