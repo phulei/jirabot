@@ -23,7 +23,7 @@ class Jira
       # this line may cause you problems.  If you don't
       # see full ticket information, comment it out.
       3.times { thingies.pop }
-      m.reply "#{url} // #{thingies.join(" ")} Status: #{status}"
+      m.reply "#{url} // #{thingies.join(" ")} // Status: #{status}"
     end
 
 
